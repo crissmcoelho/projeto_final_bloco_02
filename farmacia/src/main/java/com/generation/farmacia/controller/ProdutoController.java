@@ -23,7 +23,6 @@ import com.generation.farmacia.repository.CategoriaRepository;
 import com.generation.farmacia.repository.ProdutoRepository;
 
 import jakarta.validation.Valid;
-
 @RestController
 @RequestMapping("/produtos")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
@@ -35,9 +34,6 @@ public class ProdutoController {
 	@Autowired
 	private CategoriaRepository categoriaRepository;
 	
-	@Autowired
-	private ProdutorRepository produtorRepository;
-
 	@GetMapping
 	public ResponseEntity<List<Produto>> getAll() {
 		return ResponseEntity.ok(produtoRepository.findAll());
